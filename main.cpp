@@ -13,6 +13,6 @@ int main(int argc, char *argv[])
     w.setWindowTitle("DE Audio");//название приложения
     w.setToolTip("DE Audio");//всплывающая подсказка
     w.show();// выводим виджет на экран
-    w.resize(550, 400);
+    w.resize(1000, 700);
     return a.exec();
 }

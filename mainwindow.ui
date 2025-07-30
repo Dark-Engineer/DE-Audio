@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>882</width>
+    <height>581</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,38 +15,237 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="5">
-     <widget class="QPushButton" name="forward">
+    <item row="0" column="5">
+     <widget class="QPushButton" name="soundlessly">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="text">
-       <string>-&gt;</string>
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="7">
+     <widget class="QLabel" name="timeEnd">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>00:00:00</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0" colspan="8">
+     <widget class="QTableView" name="playlistView"/>
+    </item>
+    <item row="10" column="0" colspan="8">
+     <widget class="QLabel" name="currentTrack">
+      <property name="text">
+       <string>Текущая песня</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
      <widget class="QPushButton" name="back">
       <property name="text">
-       <string>&lt;-</string>
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Icon.qrc">
+        <normaloff>:/Icon/back.png</normaloff>:/Icon/back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
-    <item row="0" column="6">
+    <item row="0" column="7">
      <widget class="QSlider" name="sound">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </item>
-    <item row="0" column="5">
-     <widget class="QLabel" name="label_2">
+    <item row="1" column="4">
+     <widget class="QPushButton" name="pause">
       <property name="text">
-       <string>Громкость</string>
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Icon.qrc">
+        <normaloff>:/Icon/pause.png</normaloff>:/Icon/pause.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QLabel" name="timeStart">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>00:00:00</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="stop">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Icon.qrc">
+        <normaloff>:/Icon/stop.png</normaloff>:/Icon/stop.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="6" colspan="2">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
     </item>
     <item row="1" column="3">
      <widget class="QPushButton" name="play">
       <property name="text">
-       <string>play</string>
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Icon.qrc">
+        <normaloff>:/Icon/play.png</normaloff>:/Icon/play.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0" colspan="8">
+     <widget class="QSlider" name="lengthMusic">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="QPushButton" name="forward">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Icon.qrc">
+        <normaloff>:/Icon/next.png</normaloff>:/Icon/next.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -63,50 +262,6 @@
       </property>
      </spacer>
     </item>
-    <item row="1" column="4">
-     <widget class="QPushButton" name="pause">
-      <property name="text">
-       <string>pause</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="6">
-     <spacer name="horizontalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="currentTrack">
-      <property name="text">
-       <string>Текущая песня</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="2">
-     <widget class="QPushButton" name="stop">
-      <property name="text">
-       <string>stop</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="7">
-     <widget class="QTableView" name="playlistView"/>
-    </item>
-    <item row="2" column="0" colspan="7">
-     <widget class="QProgressBar" name="length_music">
-      <property name="value">
-       <number>24</number>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -114,8 +269,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>22</height>
+     <width>882</width>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -124,22 +279,55 @@
     </property>
     <addaction name="separator"/>
     <addaction name="open_file"/>
+    <addaction name="savePlaylist"/>
+    <addaction name="loadPlaylist"/>
     <addaction name="exit"/>
    </widget>
    <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="open_file">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Добавить трек</string>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
   </action>
   <action name="exit">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Выход</string>
    </property>
   </action>
+  <action name="savePlaylist">
+   <property name="text">
+    <string>Сохранить плейлист</string>
+   </property>
+  </action>
+  <action name="loadPlaylist">
+   <property name="text">
+    <string>Импортировать плейлист</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Icon.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -1,15 +1,22 @@
 QWidget{
     background-color: #23282b;
-    border: 1px solid black;
+    border: 1px solid white;
 }
 QTableView{
     background-color: white;
 }
 QPushButton{
     border:none;
+
+}
+QPushButton#soundlessly{
+    border:none;
+    border-radius:15px;
+    background-color:rgb(255,255,255);
+    color:rgb(52,51,64);
 }
 QLabel#music_name{
-    color: #FF8C00;
+    color: white;
     border:none;
 }
 QLabel#currentTrack{
@@ -26,6 +33,11 @@ QLabel#sonido{
     border:none;
     color: #FF8C00;
 }
+QLabel#timeStart,#timeEnd{
+    border:none;
+    color: white;
+}
+
 QMenuBar{
     color:white;
 }
@@ -38,25 +50,28 @@ QProgressBar{
     border-radius: 5px;
     text-align: center;
 }
-QProgressBar::chunk {
- background-color: #FF8C00;
- width: 1px;
- margin: 1px;
-}
 QSlider{
   border:none;
 }
 QSlider::groove:horizontal {
-    border: 1px solid #999999;
-    height: 8px;
-    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #B1B1B1, stop:1 #c4c4c4);
-    margin: 2px 0;
+    border: 3px solid rgb(255,0,0);
+    height: 30px;
+
+    background: cyan;
+    border-radius:18px;
 }
 
 QSlider::handle:horizontal {
-    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f);
-    border: 1px solid #5c5c5c;
-    width: 18px;
-    margin: -2px 0;
-    border-radius: 3px;
+    background: rgb(52,50,64);
+    border: rgb(0,0,255);
+    width: 20px;
+    margin: -5px 0;
+    border-radius: 10px;
+}
+
+QSlider::add-page:horizontal {
+    background: rgb(200,200,200);
+    height: 30px;
+    border: 3px solid rgb(255,0,0);
+    border-radius: 18px;
 }
