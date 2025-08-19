@@ -8,9 +8,7 @@
 #include <QJsonDocument>
 #include <QSettings>
 
-MainWindow::MainWindow(QWidget *parent):
-    QMainWindow(parent),
-    ui(new Ui::MainWindow){
+MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
     //настройка плейлиста
     //инициализация модели данных от пользователя
@@ -192,7 +190,6 @@ void MainWindow::loadPlaylistFromFile(const QString &filename){
                 muted ? QStyle::SP_MediaVolumeMuted : QStyle::SP_MediaVolume));
             IS_Muted = muted;
         }
-
         file.close();
         currentPlaylistFile = filename; // Сохраняем путь к текущему плейлисту
 }
@@ -210,8 +207,7 @@ void MainWindow::positionChanged(qint64 progress){
     updateduration(progress / 1000);
 }
 void MainWindow::on_open_file_triggered(){
-    QStringList file = QFileDialog::getOpenFileNames(this,
-           tr("Открыть файл"), QString());
+    QStringList file = QFileDialog::getOpenFileNames(this, tr("Открыть файл"), QString());
        //установка данных в плейлист через цыкл. Данный цыкл аналогичен цыклу for
        foreach (QString filePath, file) {
            QList<QStandardItem *> items;
